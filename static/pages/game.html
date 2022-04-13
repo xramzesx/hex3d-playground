@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hex3D.css">
+    <link rel="stylesheet" href="css/game.css">
+
+    <!-- Frameworks and libraries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="libs/three_97.js"></script>
+    <script src="libs/OrbitControls.js"></script>
+    <script src="libs/Stats.js"></script>
+
+    <!-- Script sources -->
+    <script src="js/utilities/Net.js"></script>
+    <script src="js/Settings.js"></script>
+
+    <script src="js3D/elements/Wall3D.js"></script>
+    <script src="js3D/elements/Doors3D.js"></script>
+    <script src="js3D/elements/Hex3D.js"></script>
+    
+    <script src="js3D/elements/Item3D.js"></script>
+    <script src="js3D/elements/Light.js"></script>
+    
+    <script src="js3D/effects/Ring.js"></script>
+    
+    <script src="js3D/characters/Pointer3D.js"></script>
+    <script src="js3D/characters/Player.js"></script>
+    <script src="js3D/characters/Model.js"></script>
+    <script src="js3D/characters/Ally.js"></script>
+    <script src="js3D/characters/AllyModel.js"></script>
+    
+    <script src="js3D/effects/Particle.js"></script>
+    <script src="js3D/effects/Fireplace.js"></script>
+
+    <script src="js3D/utilities/Ui.js"></script>
+    <script src="js3D/utilities/Level3D.js"></script>
+    <script src="js3D/main/Main3D.js"></script>
+
+    <title>GAME</title>
+</head>
+<body>
+    <div id="ui">
+        <div class="ui__title"> light </div>
+        <input type="range" id="light-intensity" min=1 max=1000>
+        <input type="range" id="light-height" min=1 max=300>
+        <div class="ui__title"> aureoles </div>
+        <input type="range" id="characters-light-intensity" min=0 max=500 value=10>
+        <div class="ui__title"> camera </div>
+        <input type="range" id="camera-height" min=-50 max=400 value=0>
+    </div>
+    <div id="root"></div>
+    <div id="loading">
+        <div id="loading__container">
+            <div id="loading__title">loading</div>
+            <div id="loading__progress">
+                <div id="loading__progress--bar"></div>
+                <div id="loading__progress--percentage"></div>
+            </div>
+            <div id="loading__info">waiting</div>
+        </div>
+    </div>
+</body>
+</html>

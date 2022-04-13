@@ -1,0 +1,6 @@
+body:window-inactive {
+    overflow: hidden;
+}
+#root {
+    overflow: hidden;
+}

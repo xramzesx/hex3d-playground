@@ -1,0 +1,148 @@
+#ui {
+    position: fixed;
+}
+body {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+#root {
+    overflow: hidden;
+}
+
+input[type="range"]{
+    /* -webkit-appearance: none; */
+    /* border: none; */
+    /* background-color: #121212; */
+    /* border: 10px solid white !important; */
+}
+
+input::-webkit-slider-thumb{
+    /* background-color: blue; */
+}
+
+
+
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: #00f8; /* Otherwise white in Chrome */
+    /* border-radius: 10px; */
+    border: 2px solid #0000af11;
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    /* border-radius: 1em; */
+    background-color: #ffffff;
+    transition: background-color .1s ease;
+}
+input[type=range]:hover:-webkit-slider-thumb {
+    transform: scale(1.5);
+    background-color: #000;
+}
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* background-color: transparent; */
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+
+    border-width: 6px 0;
+}
+
+input[type=range]::-ms-fill-upper,
+input[type=range]::-ms-fill-lower {
+    border-radius: 10px;
+    background-color: #000 !important;
+}
+
+#ui {
+    background-color: #000a;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+}
+.ui__title {
+    color: white !important;
+}
+
+#loading {
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    color: #00f;
+    font-weight: 600;
+    text-align: center;
+    background-color: #001a;
+    display: flex;
+}
+
+#loading__container{
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%); 
+}
+#loading__container>*{
+    margin: 10px;
+}
+#loading__title {
+    align-self: center;
+    justify-self: center;
+    font-size: 5em;
+}
+
+#loading__info{
+    color: white;
+}
+
+#loading__progress{
+    background-color: #007a;
+    border-radius: 10px;
+    height: 30px;
+    width: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+#loading__progress--bar{
+    border-radius: 10px;
+
+    position: absolute;
+    background-color: #00fa;
+    left : 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+
+    transition: width .25s ease;
+    /* right: 0; */
+    /* transform: scaleX(0.5); */
+}
+
+#loading__progress--percentage{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

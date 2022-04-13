@@ -1,0 +1,135 @@
+.hex {
+    background-image: url('/gfx/hexagon.svg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110px ;
+
+    width: 110px;
+    height: 100px;
+    
+    position: absolute;
+    user-select: none;
+}
+
+
+.hex-direction::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    background-image: url('/gfx/triangle.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px ;
+    background-position-y: 2.5px;
+    opacity: .5;
+    /* background-image: url(graphic-to-be-filtered.jpg); */
+    filter: invert(1);
+    transition: opacity .1s ease, filter .1s ease;
+}
+
+.hex-direction {
+    
+    /* filter: invert(1); */
+    
+    border-top: 1px inset white;
+    /* border-color: #1dd15c; */
+    
+    padding: 25%;
+    color: white;
+    /* font-size: 1.2em; */
+    
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    
+    transform: translate(-50%,-50%);
+    
+    opacity: 0;
+
+    transition: opacity .1s ease, transform .1s ease, border .1s ease;
+}
+
+.hex:hover .hex-direction::before{
+    opacity: 1;
+    /* filter: invert(1) sepia(1) saturate(10000%) hue-rotate(180deg); */
+    /* filter: invert(1) hue-rotate(190deg); */
+    /* border-width: 2px; */
+    /* border-top-style: solid; */
+}
+.hex-type-wall::before {
+    filter: invert(1) sepia(1) saturate(10000%) hue-rotate(180deg);
+}
+
+.hex-type-enemy::before {
+    filter: invert(1) sepia(1) saturate(10000000000%) hue-rotate(310deg);
+}
+
+.hex-type-treasure::before {
+    filter: invert(1) sepia(1) saturate(10000%) hue-rotate(70deg);
+}
+
+.hex-type-light::before {
+    filter: invert(1) sepia(1) saturate(10000%) hue-rotate(140deg);
+}
+
+/* .hexagon {
+    position: relative;
+    width: 110px; 
+    height: 100px;
+    background-color: #64C7CC;
+    margin: 86.60px 0;
+}
+  
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+}
+  
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 50px solid #64C7CC;
+}
+  
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 50px solid #64C7CC;
+}
+
+
+ */
+/* 
+.hex {
+    float: left;
+    margin-left: 3px;
+    margin-bottom: -26px;
+}
+.hex .top {
+    width: 0;
+    border-bottom: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hex .middle {
+    width: 104px;
+    height: 60px;
+    background: #6C6;
+}
+.hex .bottom {
+    width: 0;
+    border-top: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hex-row {
+    clear: left;
+}
+.hex-row.even {
+    margin-left: 53px;
+} */

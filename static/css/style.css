@@ -1,0 +1,145 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas', monospace;
+}
+
+html { height: 100%; }
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: #121312 ;
+}
+
+#container {
+    background-color: #181818 ;
+
+    /* background: coral; */
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #121312;
+
+}
+
+#options {
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    width: 110px;
+    /* background: cornsilk; */
+    background-color: #181818 ;
+    /* background: #222326; */
+    overflow: auto;
+
+}
+.options-link{
+    text-decoration: none;
+    color: red !important
+}
+.options-link:hover{
+    color: white !important;
+    background-color: red !important;
+}
+#options-type > *,
+#options > *{
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    width: 100%;
+    background: #222326;
+    color: white;
+    border: none;
+    padding: 10px;
+    transition: background-color .1s ease;
+    /* overflow: hidden; */
+}
+#options-type>*:hover,
+#options>*:hover{
+    background-color: #1dd15c;
+}
+#options-type:hover,
+#options-type {
+    background-color: #181818;
+    display: grid;
+    padding: 0;
+}
+#options-type>*{
+    border: 2px solid #181818;
+}
+.options-type-checked{
+    border: 2px solid #1dd15c !important;
+    /* background-color: blue; */
+}
+.options-info{
+    background-color: #181818 !important;
+    padding: 5px !important;
+    border-left : 10px solid #000 !important;
+    border-right : 10px solid #181818 !important;
+}
+
+.particles {
+    color: #1dd15c !important;
+}
+
+.particles:hover {
+    background-color: #1dd15c !important;
+}
+
+#json{
+    height: 100%;
+    width: 300px;
+    background-color: #0f0f0f;
+    color: white;
+    white-space: pre;
+    overflow: auto;
+}
+#editor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#info-bar {
+    background-color: #222326;
+    color: white;
+    
+    grid-column: 1/4;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    
+    /* position: fixed; */
+    bottom: 0;
+    
+    z-index: 10;
+}
+
+
+::-webkit-scrollbar-corner {
+    background-color: #0000;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #535353;
+}
