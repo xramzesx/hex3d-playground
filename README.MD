@@ -10,6 +10,20 @@ To run this project type in terminal `npm start`
 - JQuery
 - NodeJS
 - ExpressJS
+
+## Screenshots:
+### Game
+![game](blobs/game_test.png)
+
+### Level editor
+![editor](blobs/level_editor.png)
+
+### Particles
+![particles](blobs/particle_test.png)
+
+### Fireplace
+![fireplace](blobs/fireplace_test.png)
+
 ## Some things that I learned:
 - Object Oriented Programming
 - Writing cleaner code 
